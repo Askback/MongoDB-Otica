@@ -1,0 +1,394 @@
+//pesquisas
+use ('oticas')
+db.vendedores.find()
+
+use ('oticas')
+db.categorias.find()
+
+use ('oticas')
+db.marcas.find()
+
+use ('oticas')
+db.otica.find()
+
+use ('oticas')
+db.clientes.find()
+
+use ('oticas')
+db.produtos.find()
+
+use ('oticas')
+db.pedidos.find()
+
+//Collection auxiliares
+
+//vendedores
+use('oticas')
+db.vendedores.insertMany([{nome: 'Jonathan Pereira'},
+                          {nome: 'Marcus Laerte Gomes'},
+                          {nome: 'Joel Matos'},
+                          {nome: 'Larissa Bonefieti'},
+                          {nome: 'Rugal Teixera'}
+                        ])
+
+//categorias
+use('oticas')
+db.categorias.insertMany([
+                          {descricao: 'Aviadores'},
+                          {descricao: 'Redondo'},
+                          {descricao: 'Esportivo'},
+                          {descricao: 'Quadrado'},
+                          {descricao: 'Wayfarer'}
+                        ])
+
+//Marcas
+use('oticas')
+db.marcas.insertMany([
+                          {descricao: 'Rayban'},
+                          {descricao: 'Burberry'},
+                          {descricao: 'Armani'},
+                          {descricao: 'Oakley'},
+                          {descricao: 'Prada'}
+                        ])
+
+//Documentos Principais
+
+//óticas
+use('oticas')
+db.otica.insertMany([
+            {
+                    telefone:['1140292072','1140987372'],
+                    cnpj: '91172421000155',
+                    endereco: [{
+                      cep: '09120060',
+                      logradouro: 'Rua Nat King Cole',
+                      numero: '135',
+                      bairro: 'Centreville',
+                      cidade: 'Santo André',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['11402028922','1937621118'],
+                    cnpj: '59616991000184',
+                    endereco: [{
+                      cep: '13600660',
+                      logradouro: 'Rua 21 de Setembro',
+                      numero: '547',
+                      bairro: 'Vila Bressan',
+                      cidade: 'Araras',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['1438114298','14989456305'],
+                    cnpj: '59616991000184',
+                    endereco: [{
+                      cep: '17532031',
+                      logradouro: 'Rua Gerânio',
+                      numero: '652',
+                      bairro: 'Avencas',
+                      cidade: 'Marília',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['1225376425','12983589351'],
+                    cnpj: '09567720000108',
+                    endereco: [{
+                      cep: '12280107',
+                      logradouro: 'Rua Sebastião Soares Lara',
+                      numero: '161',
+                      bairro: 'Jardim São José',
+                      cidade: 'Caçapava',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['1738818780','17995882747'],
+                    cnpj: '67179541000108',
+                    endereco: [{
+                      cep: '15703200',
+                      logradouro: 'Avenida Francisco Jales',
+                      numero: '885',
+                      bairro: 'Loteamento Avenida',
+                      cidade: 'Jales',
+                      estado: 'SP'
+                    }]                
+            },
+])
+
+//clientes
+use('oticas')
+db.clientes.insertMany([
+            {
+                    telefone:['7936943475','79986067755'],
+                    nome: 'Isadora Ester Bianca Castro',
+                    email: 'isadora-castro91@yaooll.com',
+                    endereco: [{
+                      cep: '49044148',
+                      logradouro: 'Rua Contorno I',
+                      numero: '970',
+                      bairro: 'Santa Maria',
+                      cidade: 'Aracaju',
+                      estado: 'SE'
+                    }]                
+            },
+            {
+                    telefone:['1229334568','12992299747'],
+                    nome: 'Vitor Vitor Sérgio da Luz',
+                    email: 'vitor_vitor_daluz@drimenezes.com',
+                    endereco: [{
+                      cep: '12322090',
+                      logradouro: 'Rua Alzira Pires de Moraes',
+                      numero: '357',
+                      bairro: 'Jardim América',
+                      cidade: 'Jacareí',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['1229529905','12989414597'],
+                    nome: 'Bryan Benício da Conceição',
+                    email: 'bryanbeniciodaconceicao@ferplast.com.br',
+                    endereco: [{
+                      cep: '12229072',
+                      logradouro: 'Rua Landulfo Caetano dos Santos',
+                      numero: '917',
+                      bairro: 'Residencial Interlagos',
+                      cidade: 'São José dos Campos',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['1126825104','11988144515'],
+                    nome: 'Henrique Enrico Manuel Nogueira',
+                    email: 'henriqueenriconogueira@toysbrasil.com.br',
+                    endereco: [{
+                      cep: '03377060',
+                      logradouro: 'Rua Joaquim Moreira',
+                      numero: '162',
+                      bairro: 'Chácara Belenzinho',
+                      cidade: 'São Paulo',
+                      estado: 'SP'
+                    }]                
+            },
+            {
+                    telefone:['1137300582','11995713490'],
+                    nome: 'Kaique Fábio Vinicius Jesus',
+                    email: 'kaique.fabio.jesus@i9pneus.com.br',
+                    endereco: [{
+                      cep: '02430010',
+                      logradouro: 'Rua Manuel Aguilar',
+                      numero: '958',
+                      bairro: 'Lauzane Paulista',
+                      cidade: 'São Paulo',
+                      estado: 'SP'
+                    }]                
+            },
+])
+
+//produtos
+use('oticas')
+db.produtos.insertMany([
+            {
+                    nome:'Óculos safira',
+                    preco: 2150.00,
+                    categorias: ObjectId('6294bfc728df2ff968e3773d'), 
+                    marcas: ObjectId('6294bfcb5c54e14a41f837f8') 
+            },
+            {
+                    nome:'M22',
+                    preco: 649.99,
+                    categorias: ObjectId('6294bfc728df2ff968e3773e'),
+                    marcas: ObjectId('6294bfcb5c54e14a41f837f9')
+            },
+            {
+                    nome:'Vogue VO5363 W656',
+                    preco: 899.99,
+                    categorias: ObjectId('6294bfc728df2ff968e3773f'),
+                    marcas: ObjectId('6294bfcb5c54e14a41f837fa')
+            },
+            {
+                    nome:'TR90 Titanium',
+                    preco: 320.99,
+                    categorias: ObjectId('6294bfc728df2ff968e37740'),
+                    marcas: ObjectId('6294bfcb5c54e14a41f837fb')
+            },
+            {
+                    nome:'Schuler MB-2814',
+                    preco: 550.00,
+                    categorias: ObjectId('6294bfc728df2ff968e37741'),
+                    marcas: ObjectId('6294bfcb5c54e14a41f837fc')
+            }
+])
+
+//Carregando informações da Categoria no Produto
+use('oticas')
+db.produtos.aggregate([  
+  {
+    $lookup: {
+      from: 'categorias',
+      localField: 'categorias',
+      foreignField: '_id',
+      as: 'detalhe_categorias'
+    }
+  }
+])
+
+//Carregando informações da Marca no Produto
+use('oticas')
+db.produtos.aggregate([  
+  {
+    $lookup: {
+      from: 'marcas',
+      localField: 'marcas',
+      foreignField: '_id',
+      as: 'detalhe_marcas'
+    }
+  }
+])
+
+//Pedido
+use('oticas')
+db.pedidos.insertMany([
+            {
+                    valorT: 550.00,
+                    emissao: '24/09/2021',
+                    vendedor:  ObjectId('6294bfc1e0c8818765d449cd'),
+                    otica: ObjectId('6294bfd5e20a760c68db8e67'),
+                    produtos:[{
+                    produto: ObjectId('6294d365c4ea3418420df49a'),
+                    quantidade: 1,
+                    valor: 550.00
+                    }]
+            },
+            {
+                    valorT: 220.00,
+                    emissao: '02/05/2022',
+                    vendedor:  ObjectId('6294bfc1e0c8818765d449ce'),
+                    otica: ObjectId('6294bfd5e20a760c68db8e68'),
+                    produtos:[{
+                    produto: ObjectId('6294d365c4ea3418420df499'),
+                    quantidade: 1,
+                    valor: 320.99
+                    }]
+            },
+                        {
+                    valorT: 699.99,
+                    emissao: '29/03/2022',
+                    vendedor:  ObjectId('6294bfc1e0c8818765d449cf'),
+                    otica: ObjectId('6294bfd5e20a760c68db8e69'),
+                    produtos:[{
+                    produto: ObjectId('6294d365c4ea3418420df498'),
+                    quantidade: 1,
+                    valor: 899.99
+                    }]
+            },
+            {
+                    valorT: 649.99,
+                    emissao: '15/08/2021',
+                    vendedor:  ObjectId('6294bfc1e0c8818765d449d0'),
+                    otica: ObjectId('6294bfd5e20a760c68db8e6a'),
+                    produtos:[{
+                    produto: ObjectId('6294d365c4ea3418420df497'),
+                    quantidade:1,
+                    valor: 649.99
+                    }]
+            },
+            {
+                    valorT: 4000,
+                    emissao: '12/04/2022',
+                    vendedor:  ObjectId('6294bfc1e0c8818765d449d1'),
+                    otica: ObjectId('6294bfd5e20a760c68db8e6b'),
+                    produtos:[{
+                    produto: ObjectId('6294d365c4ea3418420df496'),
+                    quantidade: 2,
+                    valor: 2150.00
+                    },
+                    {
+                    produto: ObjectId('6294d365c4ea3418420df49a'),
+                    quantidade: 1,
+                    valor: 549.99
+                    }
+                    ]
+            }
+])
+
+//Carregando informações do vendedor no Pedido
+use('oticas')
+db.pedidos.aggregate([  
+  {
+    $lookup: {
+      from: 'vendedores',
+      localField: 'vendedor',
+      foreignField: '_id',
+      as: 'detalhe_vendedor'
+    }
+  }
+])
+
+//Carregando informações da otica no Pedido
+use('oticas')
+db.pedidos.aggregate([  
+  {
+    $lookup: {
+      from: 'otica',
+      localField: 'otica',
+      foreignField: '_id',
+      as: 'detalhe_otica'
+    }
+  }
+])
+
+//Carregando informações dos produtos no Pedido
+use('oticas')
+db.pedidos.aggregate([  
+  {
+    $unwind:{
+      path:"$produtos",preserveNullAndEmptyArrays:false
+    }
+  },
+{
+    $lookup: {
+      from: 'produtos',
+      localField: 'produtos.produto',
+      foreignField: '_id',
+      as: 'detalhe_produto'
+    }
+  }
+])
+
+//Excluir registros
+use('oticas')
+db.marcas.find()
+
+use('oticas')
+db.marcas.deleteMany({descricao: "Prada"})
+
+//Update de registros
+use('oticas')
+db.pedidos.find()
+
+use('oticas')
+db.pedidos.updateMany({valorT: {$gt: 650}}, {$set: {"promoção": "10% off na proxima compra"}})
+
+//Consultas
+
+use('oticas')
+db.produtos.find(
+  {$and:[
+  {preco: {$gt: 500}},
+  {nome: {$not: {$eq:"M22"}}} // 
+  ]},
+  {nome: 1, preco: 1, marcas: 1,categorias: 1, _id: 0}
+)
+
+use('oticas')
+db.clientes.find(
+  {$nor:[
+  {"endereco.estado": {$eq: "SE"}},
+  {"endereco.bairro": {$eq: "Lauzane Paulista"}} // 
+  ]},
+  {nome: 1,telefone: 1,"endereco.cidade": 1, "endereco.estado": 1, "endereco.bairro": 1,_id: 0}
+)
